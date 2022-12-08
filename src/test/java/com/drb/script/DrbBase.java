@@ -1,25 +1,27 @@
 package com.drb.script;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.util.Properties;
-import java.util.concurrent.TimeUnit;
+
+
 import java.io.FileInputStream;
+import java.io.IOException;
+import java.time.Duration;
+import java.util.Properties;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class DrbTestBase 
-{
-	
+public class DrbBase 
+{	
 	WebDriver driver;
 	public static Properties prop;
+	
 	public static void DrbTestBase() throws IOException
 	{
 		String confpath=System.getProperty("user.dir")+"/src/test/resources/config.properties";
@@ -51,12 +53,12 @@ public class DrbTestBase
 	  }  
 	  driver.get(url);
 	  driver.manage().window().maximize();
-	  
-	
+	  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(120));
+
 	}
-	@AfterTest
-	public void teardown()
-	{
-	driver.close();	
-	}
+//	@AfterTest
+//	public void teardown()
+//	{
+//	driver.close();	
+//	}
 }

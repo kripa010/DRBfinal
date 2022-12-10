@@ -9,8 +9,8 @@
       
        <include name="validlogin"/>
         
-      <include name="validEditProfile"/>
-      
+      <include name="deleteProfile"/>
+       <include name="logOut"/>
       
       </methods>
       </class>

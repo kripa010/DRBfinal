@@ -6,14 +6,11 @@
     <classes>
       <class name="com.drb.script.DrbTest">
       <methods>
-      <include name="validlogin"/>
-      
-      <include name="inValidlogin1"/>
       <include name="validSignUp"/>
-      <include name="invalidSignUp"/>
-       
-      <include name="logOut"/>
-     <include name="inValidSignUpWithExisting"/>
+       <include name="validlogin"/>
+        
+      <include name="validAllCreateProfile"/>
+      
       </methods>
       </class>
     </classes>

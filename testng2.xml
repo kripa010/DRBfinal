@@ -6,9 +6,12 @@
     <classes>
       <class name="com.drb.script.DrbTest">
       <methods>
-      <include name="validSignUp"/>
-      <include name="validAllCreateProfile"/>
-      <include name="logOut"/>
+      
+       <include name="validlogin"/>
+        
+      <include name="validEditProfile"/>
+      
+      
       </methods>
       </class>
     </classes>
